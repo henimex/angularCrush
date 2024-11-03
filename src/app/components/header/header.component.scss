@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  padding-inline: 16px;
+  padding-block: 8px;
+  background-color: #333;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: aquamarine;
+  font-weight: 600;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    > span {
+      &:hover {
+        color: rgb(5, 106, 153);
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        &:hover {
+          color: rgb(5, 106, 153);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

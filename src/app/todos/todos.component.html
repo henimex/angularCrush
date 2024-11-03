@@ -1,0 +1,20 @@
+<h3>Todos List</h3>
+
+<form>
+  <label> Filter Todo Items </label>
+  <input
+    type="text"
+    name="searchTerm"
+    [(ngModel)]="searchTerm"
+    placeholder="Search Todo..."
+  />
+</form>
+
+<ul class="todos">
+  @for (item of todoItems() | todoFilter : searchTerm() ; track item.id) {
+  <app-todo-item
+    (itemToggle)="itemClicedFromParentChangeChild(item)"
+    [item]="item"
+  />
+  }
+</ul>
